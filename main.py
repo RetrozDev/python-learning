@@ -3,7 +3,8 @@ from chapter2_ifelse import IfElse
 from chapter3_array import ArrayChapter
 from chapter4_loops import LoopsChapter
 from chapter5_functions import FunctionsChapter
-from chapter6_player import Player
+from chapter6_class import Player
+from chapter7_inheritance import Warrior
 
 def main():
     # Chapter 0 : Introduction
@@ -38,6 +39,11 @@ def main():
     player2 = Player("Player 2", 30.0, 10.0)
     player1.take_damage(5)
     player2.take_damage(30)
+
+    # Chapter 7: Inheritance
+    warrior1 = Warrior("Warrior 1", 100.0, 15.0)
+    warrior1.take_damage(10)
+    print(f"Warrior 1 - Health: {warrior1.health}, Armor: {warrior1.armor}")
 
 if __name__ == "__main__":
     main()
