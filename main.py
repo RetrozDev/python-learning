@@ -2,6 +2,7 @@ def main():
     # Chapter 0 : Introduction
     print("Hello, World!")
 
+
     # Chapter 1 : Variables and Data Types
     username = "Retroz" # String
     age = 25 # Integer
@@ -17,6 +18,7 @@ def main():
 
     print(f"User Info: {user_info}")
 
+
     # Chapter 2 : If Else
     price = 80
 
@@ -29,6 +31,22 @@ def main():
         wallet = 0
     else:
         print("Insufficient funds!")
+
+
+    # Chapter 3 : Array
+    online_players = ["Player1", "Player2", "Player3"]
+    print(f"Online Players: {online_players}")
+    print(f"First Player: {online_players[0]}")
+    print(f"Last Player: {online_players[len(online_players)-1]}")
+    # Change first player username :
+    online_players[0] = "NewPlayer1"
+    print(f"Updated First Player: {online_players[0]}")
+    online_players.insert(2, "InsertedPlayer")
+    print(f"Updated Online Players: {online_players}")
+    online_players[2:len(online_players) - 1] = ["NewPlayer2", "NewPlayer3"]
+    print(f"Final Online Players: {online_players}")
+    online_players.append("Player4")
+    print(f"Final Online Players after append: {online_players}")
 
 if __name__ == "__main__":
     main()
