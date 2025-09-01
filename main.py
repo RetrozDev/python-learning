@@ -17,5 +17,18 @@ def main():
 
     print(f"User Info: {user_info}")
 
+    # Chapter 2 : If Else
+    price = 80
+
+    if wallet >= price:
+        wallet -= price
+        print(f"Purchase successful! Remaining wallet balance: {wallet}")
+
+    elif wallet < 0:
+        print("Wallet balance cannot be negative!")
+        wallet = 0
+    else:
+        print("Insufficient funds!")
+
 if __name__ == "__main__":
     main()
