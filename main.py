@@ -1,10 +1,13 @@
-from chapter1_variables import VariablesAndDataTypes
-from chapter2_ifelse import IfElse
-from chapter3_array import ArrayChapter
-from chapter4_loops import LoopsChapter
-from chapter5_functions import FunctionsChapter
-from chapter6_class import Player
-from chapter7_inheritance import Warrior
+from chapters.chapter1_variables import VariablesAndDataTypes
+from chapters.chapter2_ifelse import IfElse
+from chapters.chapter3_array import ArrayChapter
+from chapters.chapter4_loops import LoopsChapter
+from chapters.chapter5_functions import FunctionsChapter
+from chapters.chapter6_class import Player
+from chapters.chapter7_inheritance import Warrior
+from chapters.chapter8_interface import Interface
+
+import webbrowser
 
 def main():
     # Chapter 0 : Introduction
@@ -44,6 +47,14 @@ def main():
     warrior1 = Warrior("Warrior 1", 100.0, 15.0)
     warrior1.take_damage(10)
     print(f"Warrior 1 - Health: {warrior1.health}, Armor: {warrior1.armor}")
+
+    # Chapter 8: Interface
+    interface = Interface("User Interface", 800, 600, "./assets/logo.ico", "#282A36")
+    username = "Retroz"
+    interface.add_title(f"Welcome {username} !", "#F8F8F2")
+    interface.add_subtitle("This is your dashboard", "#6272A4")
+    interface.add_button("Click Me", lambda: webbrowser.open_new("https://i.giphy.com/YQitE4YNQNahy.webp"), "#F8F8F2", "#44475A")
+    interface.run()
 
 if __name__ == "__main__":
     main()
