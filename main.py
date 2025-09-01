@@ -74,8 +74,27 @@ def main():
     print(f"Max Result: {max_result}") # Expected 10
 
 
-    # chapter 6 : Objects
-    
+    # chapter 6 : Class
+    class Player :
+        def __init__(self, username, health, attack):
+            self.username = username
+            self.health = health
+            self.attack = attack
+            print(f"{self.username} created with {self.health} health and {self.attack} attack.")
+
+        def take_damage(self, damage):
+            if self.health - damage <= 0:
+                self.health = 0
+                print(f"{self.username} has been defeated!")
+            else: self.health -= damage
+            print(f"{self.username} took {damage} damage. Remaining health: {self.health}")
+
+    player1 = Player("Player 1", 20.0, 5.0)
+
+    player2 = Player("Player 2", 30.0, 10.0)
+
+    player1.take_damage(5)
+    player2.take_damage(30)
 
 if __name__ == "__main__":
     main()
