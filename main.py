@@ -48,5 +48,16 @@ def main():
     online_players.append("Player4")
     print(f"Final Online Players after append: {online_players}")
 
+
+    # Chapter 4 : Loops
+    # 1: for loop
+    for player in online_players:
+        print(f"Username: {player} n°: {online_players.index(player)+1}")
+    # 2: while loop
+    i = 1
+    while i <= 10:
+        print(f"i: {i}")
+        i += 1
+
 if __name__ == "__main__":
     main()
