@@ -59,5 +59,23 @@ def main():
         print(f"i: {i}")
         i += 1
 
+
+    # Chapter 5: functions
+    def multiply(a, b):
+        return a * b
+
+    result = multiply(5, 10)
+    print(f"Multiplication Result: {result}") # Expected 50
+
+    def return_max(a, b):
+        return a if a > b else b
+
+    max_result = return_max(5, 10)
+    print(f"Max Result: {max_result}") # Expected 10
+
+
+    # chapter 6 : Objects
+    
+
 if __name__ == "__main__":
     main()
