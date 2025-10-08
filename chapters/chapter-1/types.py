@@ -1,5 +1,5 @@
-# Chapter 1 :
-# Variable types
+
+# a: Variable types
 
 # Text Type
 username: str = "Retroz"  # string of characters
